@@ -46,6 +46,37 @@ body {
     text-decoration: none;
 }
 
+/*Main*/
+#divtit {
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+}
+
+#divimgsobre {
+    display: flex;
+    justify-content: center;
+    margin-left: 45%;
+}
+
+#imgsobre {
+    max-width: 455px;
+    max-height: 555px;
+    border-radius: 15px;
+    margin-left: 45%;
+}
+
+#txtsobre {
+    color: white;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 45px;
+    float: left;
+    max-width: 100%;
+}
+
 /*Footer*/
 
 #ftr {
@@ -56,9 +87,9 @@ body {
     margin-top: 75px;
 
     display: flex;
-    flex-direction: column;   
-    align-items: center;     
-    gap: 15px;                
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 
