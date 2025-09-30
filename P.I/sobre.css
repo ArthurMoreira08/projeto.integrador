@@ -46,6 +46,14 @@ body {
     text-decoration: none;
 }
 
+.titulos {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
+    margin-top: 85px;
+}
+
+
 /*Main*/
 #divtit {
     color: white;
@@ -53,9 +61,10 @@ body {
     display: flex;
     justify-content: center;
     max-width: 980px;
+    padding-top: 0 5px;
 }
 
-#divprincipal{
+.container{
     display: flex;
     justify-content: space-between;
     max-width: 100%;
