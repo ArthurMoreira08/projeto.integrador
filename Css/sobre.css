@@ -24,13 +24,14 @@ body {
 /*Header*/
 
 #top {
-    width: 100%;
-    min-height: 130px;
+ min-height: 130px;
     background-color: #1E3A8A;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 900px;
+    padding: 0 50px;
+    max-width: 100vw;
+    position: relative;
 }
 
 #navigation {
@@ -127,4 +128,50 @@ body {
 .icons {
     width: 29px;
     height: 28px;
+}
+
+@media (max-width: 768px) {
+
+       #top {
+        flex-direction: column;   /* empilha logo e menu */
+        gap: 15px;                /* espaço entre logo e menu */
+        padding: 20px;
+    }
+
+    #logodiv {
+        justify-content: center;  /* centraliza a logo */
+        width: 100%;
+    }
+
+    #logoimg {
+        width: 120px;
+        height: auto;
+    }
+
+    #navigation {
+        flex-direction: row;      /* deixa os links em uma linha */
+        gap: 25px;                /* espaço entre eles */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nava {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;  /* empilha no celular */
+        text-align: center;
+    }
+
+    #imgsobre {
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    #txtsobre {
+        font-size: 16px;
+        padding: 0 5px;
+        line-height: 1.5;
+    }
 }

@@ -24,13 +24,14 @@ body {
 /*Header*/
 
 #top {
-    width: 100%;
-    min-height: 130px;
+ min-height: 130px;
     background-color: #1E3A8A;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 900px;
+    padding: 0 50px;
+    max-width: 100vw;
+    position: relative;
 }
 
 #navigation {
@@ -138,4 +139,59 @@ body {
 .icons {
     width: 29px;
     height: 28px;
+}
+
+/* Tablets e telas médias */
+@media (max-width: 992px) {
+    #top {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    #navigation {
+        gap: 25px;
+    }
+
+    .nava {
+        font-size: 1.2rem;
+    }
+
+    .titulos {
+        font-size: 2rem;
+    }
+
+    .divtxt {
+        font-size: 1.2rem;
+    }
+}
+
+/* Smartphones */
+
+@media (max-width: 600px) {
+    #top {
+        flex-direction: column;   /* empilha logo e menu */
+        align-items: center;      /* centraliza tudo */
+        padding: 20px;
+    }
+
+    #logodiv {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #logoimg {
+        width: 120px;
+        height: auto;
+    }
+
+    #navigation {
+        flex-direction: row;   /* deixa os links lado a lado */
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .nava {
+        font-size: 1rem;
+    }
 }

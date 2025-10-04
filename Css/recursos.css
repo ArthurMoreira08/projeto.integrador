@@ -31,13 +31,14 @@ main {
 /*Header*/
 
 #top {
-    width: 100%;
-    min-height: 130px;
+ min-height: 130px;
     background-color: #1E3A8A;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 900px;
+    padding: 0 50px;
+    max-width: 100vw;
+    position: relative;
 }
 
 #navigation {
@@ -80,7 +81,7 @@ main {
     margin-top: 50px;
     font-family: "Montserrat", sans-serif;
     align-items: flex-start;
-    min-height: 40.1vh;
+    min-height: 55vh;
 }
 
 .accordion {
@@ -110,6 +111,7 @@ main {
     overflow: hidden;
     transition: max-height 0.4s ease;
     padding: 0 10px;
+    font-size: 16px;
     background-color: rgb(1, 83, 121);
     color: white;
     border-bottom-left-radius: 5px;
@@ -125,17 +127,14 @@ main {
 }
 
 .image-area img {
-    width: 100%;
-    width: 450px;
-    height: 100%;
-    height: 300px;
+    max-width: 100%;     /* nunca passa da largura do container */
+    height: auto;        /* altura proporcional */
     border-radius: 10px;
-    display: none;
+    display: none;      /* garante que apareça corretamente */
 }
 
-.image-area img:first-child {
-    display: block;
-}
+
+
 
 /*Footer*/
 
@@ -146,6 +145,7 @@ main {
     border-radius: 10px 10px 0 0;
     margin-top: 75px;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -163,4 +163,71 @@ main {
 .icons {
     width: 29px;
     height: 28px;
+}
+
+/* Responsividade - celulares */
+@media (max-width: 768px) {
+    #top {
+        flex-direction: column;   /* empilha logo e menu */
+        gap: 15px;                /* espaço entre logo e menu */
+        padding: 20px;
+    }
+
+    #logodiv {
+        justify-content: center;  /* centraliza a logo */
+        width: 100%;
+    }
+
+    #logoimg {
+        width: 120px;
+        height: auto;
+    }
+
+    #navigation {
+        flex-direction: row;      /* deixa os links em uma linha */
+        gap: 25px;                /* espaço entre eles */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nava {
+        font-size: 1rem;
+    }
+
+
+ #div-accordion {
+        flex-direction: column;   /* muda para coluna no mobile */
+        margin-left: 0;
+        margin-top: 30px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .accordion {
+        width: 100%;
+        max-width: 350px;         /* limita largura no mobile */
+    }
+
+ .image-area img {
+        max-width: 205px;   /* controla o tamanho máximo no mobile */
+        max-height: 450px;
+        margin: 0 auto; 
+ }
+
+       #ftr {
+        padding: 20px 10px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #txtftr {
+        font-size: 0.9rem;
+        margin-left: 0;    /* centraliza o texto */
+        margin-bottom: 5px;
+    }
+
+    .icons {
+        width: 24px;
+        height: 24px;
+    }
 }
